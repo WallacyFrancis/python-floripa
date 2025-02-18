@@ -1,101 +1,62 @@
-import Image from "next/image";
+'use client'
+
+import { poppinsRegular, poppinsBold, poppinsLight, benedictRegular } from '@/app/layout'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="space-y-8">
+      {/* Cabeçalho */}
+      <header className="space-y-4">
+        <h1 className="text-4xl font-poppins-bold font-bold text-primary-blue">
+          Pessoas {`>`} Tecnologia
+        </h1>
+        <p className="text-lg text-gray-dark">
+          Bem-vindo à comunidade Python de Florianópolis
+        </p>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Próximo Evento */}
+      <section className="bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold text-primary-blue mb-4">
+          Próximo Evento
+        </h2>
+        <div className="bg-gray-100 rounded-lg p-4">
+          <div className="flex items-start gap-4">
+            <div className="bg-primary-yellow text-primary-blue font-bold p-3 rounded-lg text-center min-w-[80px]">
+              <div className="text-sm">JAN</div>
+              <div className="text-2xl">25</div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-primary-blue">
+                82º Python Floripa ACM → Primeiro Meetup de 2025
+              </h3>
+              <p className="text-gray-dark mt-2">
+                O evento que abre 2025 com chave de ouro será realizado com o apoio da Associação Catarinense de Medicina!
+              </p>
+              <div className="flex items-center gap-2 mt-4 text-sm text-gray-dark">
+                <span>🕒 19h29</span>
+                <span>📍 Rod. José Carlos Daux (SC 401) - Saco Grande, Florianópolis/SC</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Editor de código */}
+      <section className="bg-[#1e1e1e] rounded-lg p-6 font-mono">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <pre className="text-white">
+          <code>{`def hello_world():
+    print("Bem-vindo à Python Floripa!")
+
+if __name__ == "__main__":
+    hello_world()`}</code>
+        </pre>
+      </section>
     </div>
-  );
+  )
 }

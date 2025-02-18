@@ -9,11 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'primary-blue': '#012c66',
+        'primary-yellow': '#ffb80d',
+        'gray-dark': '#545454',
+        'gray-light': '#a6a6a6',
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'benedict': ['Benedict', 'sans-serif'],
       },
     },
   },
   plugins: [],
 };
+
 export default config;
