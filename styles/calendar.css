@@ -15,6 +15,7 @@
 }
 
 .calendar-weekday {
+  
   @apply text-sm text-gray-500 font-medium text-center;
 }
 
