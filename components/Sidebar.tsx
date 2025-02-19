@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -35,10 +35,36 @@ const navItems: NavItemInterface[] = [
 
 export default function Sidebar({}: SidebarInterface) {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const pathname = usePathname();
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 } // Elemento precisa estar 50% visível para ser considerado ativo
+    );
+
+    // Observa todas as seções
+    document.querySelectorAll('section[id], header[id]').forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   // Função para verificar se o link está ativo
-  const isActiveLink = (href: string) => pathname === href;
+  const isActiveLink = (href: string) => {
+    const sectionId = href.replace('#', '');
+    return sectionId === activeSection;
+  };
 
   // Função para rolagem suave
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -46,7 +72,7 @@ export default function Sidebar({}: SidebarInterface) {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false); // Fecha o menu mobile após clicar
+      setIsOpen(false);
     }
   };
 
@@ -114,7 +140,7 @@ export default function Sidebar({}: SidebarInterface) {
                     flex items-center gap-3 p-2 rounded-md transition-colors
                     ${
                       isActiveLink(item.href)
-                        ? 'bg-white/10 text-primary-yellow'
+                        ? 'bg-white/10 text-primary-yellow font-medium'
                         : 'text-white hover:bg-white/5'
                     }
                   `}
