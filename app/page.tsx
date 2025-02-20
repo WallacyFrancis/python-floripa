@@ -4,6 +4,8 @@ import { poppinsRegular, poppinsBold, poppinsLight, benedictRegular } from '@/ap
 import PyNewsCard from '@/components/PyNewsCard'
 import PostCard from '@/components/PostCard'
 import Members from '@/components/Members'
+import Community from '@/components/Community'
+import memberImages from '@/data/member_images.json'
 
 const membros = [
   {
@@ -335,14 +337,25 @@ export default function Home() {
       </section>
 
       {/* Seção de Membros */}
-      {/* <section id="membros" className="min-h-screen py-20 bg-gray-50"> */}
       <section id="membros" className="bg-gray-50 rounded-lg shadow-lg p-6">
         <h2 className="text-2xl font-bold text-primary-blue mb-4">
           Membros
         </h2>
-
         <div className="container mx-auto px-4">
           <Members members={membros} />
+        </div>
+      </section>
+
+      {/* Seção de Comunidade */}
+      <section id="comunidade" className="bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold text-primary-blue mb-2">
+          Comunidade
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Venha fazer parte da Comunidade Python Floripa. Já somos 4231 membros!
+        </p>
+        <div className="w-full mx-auto h-[400px]">
+          {/* <Community memberImages={memberImages.member_images} /> */}
         </div>
       </section>
 
