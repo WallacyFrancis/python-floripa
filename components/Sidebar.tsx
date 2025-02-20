@@ -7,22 +7,6 @@ import { usePathname } from 'next/navigation';
 import { NavItemInterface, SidebarInterface } from '@/interfaces/SidebarInterface';
 import { House, Newspaper, FileText, Users, Network, Mail } from 'lucide-react';
 
-// Componente do ícone Python
-const PythonIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    width="24"
-    height="24"
-    stroke="currentColor"
-    strokeWidth="1.75"
-    fill="none"
-  >
-    <path d="M12 2C8.73 2 8 3.43 8 5v2.67c0 1.73-.11 2.33-2 2.33H4c-1.75 0-2 1.37-2 2.5 0 1.14.25 2.5 2 2.5h2c1.75 0 2 .77 2 2.33V20c0 1.57.73 3 4 3s4-1.43 4-3v-2.67c0-1.73.11-2.33 2-2.33h2c1.75 0 2-1.37 2-2.5 0-1.14-.25-2.5-2-2.5h-2c-1.75 0-2-.77-2-2.33V5c0-1.57-.73-3-4-3z" />
-    <circle cx="9" cy="7" r="1" fill="currentColor" />
-    <circle cx="15" cy="17" r="1" fill="currentColor" />
-  </svg>
-);
-
 // Lista de itens de navegação
 const navItems: NavItemInterface[] = [
   { label: 'Página Inicial', href: '#home', icon: <House strokeWidth={1.75} /> },
@@ -117,19 +101,19 @@ export default function Sidebar({}: SidebarInterface) {
         `}
       >
         {/* Logo */}
-        <div className="mb-6">
+        <div className="mb-6 -mt-5">
           <Image
             src="/logo.png"
             alt="Python Floripa"
-            width={200}
-            height={72}
+            width={180}
+            height={30}
             priority
-            className="w-full -mb-12"
+            className="w-50 h-30"
           />
         </div>
 
         {/* Navegação */}
-        <nav className="flex-1">
+        <nav className="flex-1 -mt-5">
           <ul className="space-y-4">
             {navItems.map((item) => (
               <li key={item.href}>

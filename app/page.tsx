@@ -3,6 +3,54 @@
 import { poppinsRegular, poppinsBold, poppinsLight, benedictRegular } from '@/app/layout'
 import PyNewsCard from '@/components/PyNewsCard'
 import PostCard from '@/components/PostCard'
+import Members from '@/components/Members'
+
+const membros = [
+  {
+    name: "Bento Machado",
+    role: "Head of Operations",
+    github: "https://github.com/bentomachado",
+    linkedin: "https://linkedin.com/in/bentomachado",
+    instagram: "https://instagram.com/bentomachado"
+  },
+  {
+    name: "Felipe Angeli",
+    role: "Media Strategist",
+    github: "https://github.com/felipeangeli",
+    linkedin: "https://linkedin.com/in/felipeangeli",
+    instagram: "https://instagram.com/felipeangeli"
+  },
+  {
+    name: "Jardel Godinho",
+    role: "Event Host",
+    github: "https://github.com/jardelgodinho",
+    linkedin: "https://linkedin.com/in/jardelgodinho",
+    instagram: "https://instagram.com/jardelgodinho"
+  },
+  {
+    name: "Lucas Biscaino",
+    role: "Streaming Engineer",
+    github: "https://github.com/lucasbiscaino",
+    linkedin: "https://linkedin.com/in/lucasbiscaino"
+  },
+  {
+    name: "Maria Antônia",
+    role: "Media Strategist",
+    linkedin: "https://linkedin.com/in/mariaantonia"
+  },
+  {
+    name: "Maxson Almeida",
+    role: "Media Strategist",
+    github: "https://github.com/maxsonalmeida",
+    linkedin: "https://linkedin.com/in/maxsonalmeida"
+  },
+  {
+    name: "Francis",
+    role: "Media Strategist",
+    github: "https://github.com/francis",
+    linkedin: "https://linkedin.com/in/francis"
+  }
+];
 
 export default function Home() {
   return (
@@ -283,6 +331,18 @@ export default function Home() {
             description="Antes de começarmos a falar sobre o Celery, é importante entender como o fluxo web tradicional pode enfrentar sérios desafios"
             link="/posts/celery-processamento-assincrono"
           />
+        </div>
+      </section>
+
+      {/* Seção de Membros */}
+      {/* <section id="membros" className="min-h-screen py-20 bg-gray-50"> */}
+      <section id="membros" className="bg-gray-50 rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold text-primary-blue mb-4">
+          Membros
+        </h2>
+
+        <div className="container mx-auto px-4">
+          <Members members={membros} />
         </div>
       </section>
 
