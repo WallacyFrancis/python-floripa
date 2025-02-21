@@ -1,10 +1,14 @@
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 interface CommunityProps {
   memberImages: string[];
 }
 
 const Community = ({ memberImages }: CommunityProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
   // Divide as imagens em 5 linhas
   const rows = Array.from({ length: 5 }, (_, i) => 
     memberImages.slice(
@@ -13,10 +17,46 @@ const Community = ({ memberImages }: CommunityProps) => {
     )
   );
 
+  useEffect(() => {
+    const container = containerRef.current;
+    const content = contentRef.current;
+
+    if (!container || !content) return;
+
+    // Clona o conteúdo para criar o efeito infinito
+    const clone = content.cloneNode(true) as HTMLDivElement;
+    container.appendChild(clone);
+
+    // Calcula a duração da animação baseada no tamanho do conteúdo
+    const contentWidth = content.offsetWidth;
+    const duration = contentWidth / 50; // Ajuste este valor para controlar a velocidade
+
+    // Aplica a animação
+    container.style.animation = `slideLeft ${duration}s linear infinite`;
+    container.style.width = `${contentWidth * 2}px`; // Dobra a largura para acomodar o clone
+
+  }, [memberImages]);
+
   return (
-    <div className="container mx-auto">
-      <div className="w-full overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-gray-300">
-        <div className="flex flex-col gap-4 min-w-max p-4">
+    <div className="h-full w-full relative overflow-hidden">
+      <style jsx>{`
+        @keyframes slideLeft {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+      <div 
+        ref={containerRef}
+        className="absolute inset-0 flex"
+      >
+        <div 
+          ref={contentRef}
+          className="flex flex-col gap-4 p-4"
+        >
           {rows.map((row, rowIndex) => (
             <div 
               key={`row-${rowIndex}`}

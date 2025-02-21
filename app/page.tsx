@@ -356,7 +356,7 @@ export default function Home() {
           Venha fazer parte da Comunidade Python Floripa. Já somos 4231 membros!
         </p>
         <div className="w-full mx-auto h-[400px]">
-          {/* <Community memberImages={memberImages.member_images} /> */}
+          <Community memberImages={memberImages.member_images} />
         </div>
       </section>
 
