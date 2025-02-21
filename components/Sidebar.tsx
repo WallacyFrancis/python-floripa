@@ -14,7 +14,7 @@ const navItems: NavItemInterface[] = [
   { label: 'Posts', href: '#posts', icon: <FileText strokeWidth={1.75} /> },
   { label: 'Membros', href: '#membros', icon: <Users strokeWidth={1.75} /> },
   { label: 'Comunidade', href: '#comunidade', icon: <Network strokeWidth={1.75} /> },
-  { label: 'Contatos', href: '#contatos', icon: <Mail strokeWidth={1.75} /> },
+  { label: 'Contatos', href: '#contato', icon: <Mail strokeWidth={1.75} /> },
 ];
 
 export default function Sidebar({}: SidebarInterface) {

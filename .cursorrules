@@ -38,3 +38,4 @@
 - `public/` - Static files
 - `app/` - Next.js app directory
 - `api/` - API routes
+- `interfaces/` - Interfaces

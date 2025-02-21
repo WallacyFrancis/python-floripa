@@ -6,6 +6,7 @@ import PostCard from '@/components/PostCard'
 import Members from '@/components/Members'
 import Community from '@/components/Community'
 import memberImages from '@/data/member_images.json'
+import ContactForm from '@/components/ContactForm'
 
 const membros = [
   {
@@ -357,6 +358,22 @@ export default function Home() {
         <div className="w-full mx-auto h-[400px]">
           {/* <Community memberImages={memberImages.member_images} /> */}
         </div>
+      </section>
+
+      {/* Seção de Contato */}
+      <section id="contato" className="bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold text-primary-blue mb-4">
+          Contato
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Venha ajudar a Comunidade Python Floripa a ficar cada vez melhor!
+        </p>
+        <ContactForm 
+          onSubmit={(formData) => {
+            console.log('Form submitted:', formData);
+            // Criar a lógica para o submeter o formulário
+          }} 
+        />
       </section>
 
     </div>
