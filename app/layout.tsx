@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from '@/components/Sidebar';
 import Calendar from '@/components/Calendar';
+import Footer from '@/components/Footer';
 
 export const poppinsRegular = localFont({
   src: "./fonts/Poppins-Regular.ttf",
@@ -50,7 +51,7 @@ export default function RootLayout({
             {children}
           </main>
           
-          <aside className="hidden lg:block p-6 bg-white shadow-lg">
+          <aside className="hidden lg:block p-6 bg-white shadow-lg mt-4">
             <div className="space-y-6">
               {/* Calendário */}
               <Calendar />
@@ -67,6 +68,7 @@ export default function RootLayout({
             </div>
           </aside>
         </div>
+        <Footer />
       </body>
     </html>
   );

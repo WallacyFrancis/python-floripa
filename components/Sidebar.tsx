@@ -94,10 +94,10 @@ export default function Sidebar({}: SidebarInterface) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-0 left-0 w-[280px] h-screen bg-primary-blue shadow-sw
+          fixed top-0 left-0 w-[280px] h-screen bg-primary-blue
           transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-          flex flex-col p-6 z-40
+          flex flex-col p-6 z-40 shadow-[5px_0_10px_-5px_rgba(0,0,0,0.3)]
         `}
       >
         {/* Logo */}
