@@ -8,6 +8,26 @@ html {
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Animação do cursor piscante */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Cursor piscante para o componente de digitação */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: white;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
 :root {
   --primary-blue: #012c66;
   --primary-yellow: #ffb80d;

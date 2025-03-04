@@ -8,6 +8,7 @@ import Community from '@/components/Community'
 import memberImages from '@/data/member_images.json'
 import ContactForm from '@/components/ContactForm'
 import TuringOath from '@/components/TuringOath'
+import CodeTypingAnimation from '@/components/CodeTypingAnimation'
 
 const membros = [
   {
@@ -76,14 +77,7 @@ export default function Home() {
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <pre className="text-white">
-          <code>{`def hello_world():
-            print("Bem-vindo à Python Floripa!")
-
-            if __name__ == "__main__":
-              hello_world()`}
-          </code>
-        </pre>
+        <CodeTypingAnimation />
       </section>
       
       {/* Juramento de Turing */}
