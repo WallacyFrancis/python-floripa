@@ -69,10 +69,6 @@ A maneira mais fácil de implantar seu aplicativo Next.js é usar a [Plataforma 
 
 Consulte nossa [documentação de implantação do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
 
-## Licença
-
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
-
 ## Contato
 
 Para mais informações sobre a comunidade Python Floripa, visite nosso site ou entre em contato através das redes sociais.
