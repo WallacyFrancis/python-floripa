@@ -7,6 +7,7 @@ import Members from '@/components/Members'
 import Community from '@/components/Community'
 import memberImages from '@/data/member_images.json'
 import ContactForm from '@/components/ContactForm'
+import TuringOath from '@/components/TuringOath'
 
 const membros = [
   {
@@ -59,7 +60,7 @@ export default function Home() {
   return (
     <div className="space-y-8 lg:w-full w-[calc(100%-2rem)] mx-auto">
       {/* Cabeçalho */}
-      <header className="space-y-4 sm:mt-8 mt-6" id="home">
+      <header className="space-y-4 sm:mt-8 mt-6 pl-10 sm:pl-0" id="home">
         <h1 className="text-4xl font-poppins-bold font-bold text-primary-blue">
           Pessoas {`>`} Tecnologia
         </h1>
@@ -84,7 +85,12 @@ export default function Home() {
           </code>
         </pre>
       </section>
-
+      
+      {/* Juramento de Turing */}
+      <div className="flex justify-center my-6">
+        <TuringOath />
+      </div>
+      
       {/* Próximo Evento */}
       <section className="bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-2xl font-bold text-primary-blue mb-4">
