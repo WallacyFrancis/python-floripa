@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Python Floripa
 
-## Getting Started
+Este é um projeto da comunidade Python de Florianópolis, desenvolvido com [Next.js](https://nextjs.org) e inicializado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-First, run the development server:
+## Começando
+
+Primeiro, instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+```
+
+Em seguida, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sobre o Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O site da Python Floripa é uma plataforma para a comunidade Python de Florianópolis, onde os membros podem:
 
-## Learn More
+- Conhecer mais sobre a comunidade e seus valores
+- Ficar por dentro dos próximos eventos
+- Acessar o Juramento de Turing, nosso compromisso com a inclusão e respeito
+- Conhecer os membros da comunidade
+- Entrar em contato com os organizadores
 
-To learn more about Next.js, take a look at the following resources:
+## Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto utiliza as seguintes tecnologias:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js**: Framework React para produção
+- **TypeScript**: Para tipagem estática
+- **Tailwind CSS**: Para estilização
+- **React Query**: Para gerenciamento de estado e requisições
 
-## Deploy on Vercel
+## Estrutura do Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `components/`: Componentes reutilizáveis
+- `styles/`: Estilos globais
+- `utils/`: Funções utilitárias
+- `hooks/`: Hooks personalizados
+- `lib/`: Bibliotecas utilitárias
+- `public/`: Arquivos estáticos
+- `app/`: Diretório de aplicação Next.js
+- `api/`: Rotas de API
+- `interfaces/`: Interfaces TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribuindo
+
+Se você deseja contribuir com este projeto, sinta-se à vontade para abrir um Pull Request ou uma Issue no repositório.
+
+## Implantação
+
+A maneira mais fácil de implantar seu aplicativo Next.js é usar a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), dos criadores do Next.js.
+
+Consulte nossa [documentação de implantação do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+## Contato
+
+Para mais informações sobre a comunidade Python Floripa, visite nosso site ou entre em contato através das redes sociais.
